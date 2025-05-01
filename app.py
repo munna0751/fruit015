@@ -6,7 +6,7 @@ import io
 app = Flask(__name__)
 
 # Load model (adjust path if needed)
-model = torch.hub.load('WongKinYiu/yolov7', 'custom', path_or_model='weights/best.pt', trust_repo=True)
+model = torch.hub.load('WongKinYiu/yolov7', 'custom', path_or_model='best.pt', trust_repo=True)
 model.eval()
 
 @app.route('/detect', methods=['POST'])
